@@ -21,6 +21,7 @@ if($_SERVER["REQUEST_METHOD"] === 'POST' ){
             $select_value="Richiesta appuntamento";
             break;
         default:
+            /// in caso l'utente facesse una modifca front end
             $select_value="Richiesta contattatto";  
     }
 

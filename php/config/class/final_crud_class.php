@@ -6,6 +6,7 @@ require_once(dirname(__FILE__).'/../traits/get_homes_by_city.php');
 require_once(dirname(__FILE__).'/../traits/get_homes_by_province.php');
 require_once(dirname(__FILE__).'/../traits/home_info.php');
 require_once(dirname(__FILE__).'/../traits/login_trait.php');
+require_once(dirname(__FILE__).'/../traits/province_list.php');
 
 final class Final_crud extends Crud{
     ///only one string parameter
@@ -22,6 +23,9 @@ final class Final_crud extends Crud{
 
     ////dd
     use login_trait;
+
+    ///province list
+    use province_list;
 }
 
 

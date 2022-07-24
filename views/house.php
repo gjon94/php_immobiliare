@@ -104,7 +104,7 @@ else{
          <!-- form contact --->
          <div class="col" >
             <form action=<?php echo "./../php/functions/send_email_for_house.php" ?> class="shadow p-3 mb-5 bg-body rounded" method="POST">
-               <input type="text" name="house_id" id="house_id" value="<?php echo $result["home_id"]  ?>">
+               <input type="text" class="d-none" name="house_id" id="house_id" value="<?php echo $result["home_id"]  ?>">
                
                <div class="mb-3">
                   <label for="floatingSelect">Works with selects</label>
