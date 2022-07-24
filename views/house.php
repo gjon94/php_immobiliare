@@ -23,6 +23,7 @@ if (isset($_GET["house_id"])) {
 }
 else{
    header("location: 404.php");
+   exit;
 }
 
 
@@ -108,7 +109,7 @@ else{
                <div class="mb-3">
                   <label for="floatingSelect">Works with selects</label>
                   <select name="select_value" class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                     <option selected>Richiesta contattatto</option>
+                     <option value="0" selected>Richiesta contattatto</option>
                      <option value="1">Maggiori info</option>
                      <option value="2">Richiesta appuntamento</option>
                      
