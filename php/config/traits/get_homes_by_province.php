@@ -4,7 +4,7 @@ trait get_homes_by_province{
 
 public function get_homes_by_province($province_code){
     
-    $sql = " SELECT homes.city_id, cities.province_code, provinces.province_code, provinces.name
+    $sql = " SELECT homes.*, cities.province_code, provinces.province_code, provinces.name
     FROM homes
     INNER JOIN cities
     ON homes.city_id = cities.city_id
@@ -20,12 +20,20 @@ public function get_homes_by_province($province_code){
     $statment->execute();
     $result = $statment->get_result();
 
-    echo json_encode($result->fetch_all(MYSQLI_ASSOC));
+    if($result->num_rows > 0){
+      $result = $result->fetch_all(MYSQLI_ASSOC);
+      return $result;
 
-    $statment->close();
+    }else{
+        return false;
+    }
+    
+  
+
+    
 
    }else{
-    echo "errore";
+    echo "errore interno ";
    }
 
 

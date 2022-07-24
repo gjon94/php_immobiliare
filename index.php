@@ -4,9 +4,7 @@ session_start();
 include_once(dirname(__FILE__)."/php/config/config_connection.php");
 $result = $conn->province_list();
 
-// while($row = $result->fetch_assoc()) {
-//   echo "province_id: " . $row["province_id"]. " - Name: " . $row["province_code"]. " " . $row["name"]. "<br>";
-// }
+
 
 ?>
 
